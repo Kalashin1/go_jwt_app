@@ -1,0 +1,43 @@
+GET http://localhost:8080/
+
+###
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "fullName": "Super Admin",
+  "email" : "kinaneesamsonjohn@gmail.com",
+  "type": "admin",
+  "password": "Test1234"
+}
+
+###
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "email" : "kinaneesamsonjohn@gmail.com",
+  "password": "Test1234"
+}
+
+###
+
+POST http://localhost:8080/project
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhZG1pbiIsImV4cCI6MTcyMDczNTY2NCwiaWF0IjoxNzIwNzMyMDY0LCJpc3MiOiJ0b2RvLWFwcCIsInN1YiI6ImtpbmFuZWVzYW1zb25qb2huQGdtYWlsLmNvbSJ9.9L68jYyJBazmSWLNhBYL0ykxpn1Mmqhql4ayqp_cyto
+
+{
+  "title": "Project 1",
+	"description": "No description yet",
+	"Status": "CREATED"
+}
+
+### GET
+
+GET http://localhost:8080/projects
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhZG1pbiIsImV4cCI6MTcyMDczNTY2NCwiaWF0IjoxNzIwNzMyMDY0LCJpc3MiOiJ0b2RvLWFwcCIsInN1YiI6ImtpbmFuZWVzYW1zb25qb2huQGdtYWlsLmNvbSJ9.9L68jYyJBazmSWLNhBYL0ykxpn1Mmqhql4ayqp_cyto
+
+
+### 
+PATCH http://localhost:8080/project/1/ACCEPTED
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhZG1pbiIsImV4cCI6MTcyMDczNTY2NCwiaWF0IjoxNzIwNzMyMDY0LCJpc3MiOiJ0b2RvLWFwcCIsInN1YiI6ImtpbmFuZWVzYW1zb25qb2huQGdtYWlsLmNvbSJ9.9L68jYyJBazmSWLNhBYL0ykxpn1Mmqhql4ayqp_cyto
